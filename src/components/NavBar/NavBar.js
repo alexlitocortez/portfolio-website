@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './NavBar.css';
 
 function NavBar() {
     return (
         <div>
             <nav className='NavBar'>
-                <ul>
+                <ul className='NavBar-list'>
                     <li>About</li>
                     <li>Projects</li>
                     <li>Blog</li>
