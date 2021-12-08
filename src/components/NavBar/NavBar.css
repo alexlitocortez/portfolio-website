@@ -7,11 +7,16 @@
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 10000;
+    z-index: 998;
     cursor: pointer;
     height: 3.5em;
     line-height: 3.5em;
     padding-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .NavBar-list {
@@ -53,6 +58,7 @@
     }
 }
 
+
 @media only screen and (max-width: 816px) {
     .NavBar {
         height: 3.5em;
@@ -66,15 +72,9 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
-    .NavBar li {
-        font-size: 0.7rem;
-        padding-bottom: 0;
+@media only screen and (max-width: 768px) {
+    .NavBar-list {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 230px) {
-    .NavBar li {
-        font-size: 0.4em;
-    }
-}

@@ -1,13 +1,12 @@
 import React from 'react';
 import './Contact.css';
-import { AiFillGithub } from 'react-icons/ai';
 
 
 function Contact() {
     return (
         <div>
             <section id='contact' className='contact-wrapper'>
-                <div className='contact-container'>
+                <div id='contactsection' className='contact-container'>
                     <header>
                         <h2 className='contact-header'>Talk to me.</h2>
                     </header>
@@ -38,9 +37,8 @@ function Contact() {
                         <hr className='contact-hr' />
                         <h3>Social Media</h3>
                         <ul className='social-icons'>
-                            <li><a href="#"><span class="label">LinkedIn</span></a></li>
-                            <li><a href="#"><span className='github'><AiFillGithub /></span></a></li>
-                            <li><a href="#"><span class="label">Twitter</span></a></li>
+                            <a href='https://www.linkedin.com/in/amcortez92/' target="_blank"><i className="fa fa-linkedin"></i></a>
+                            <a href='https://github.com/alexlitocortez' target="_blank"><i className='fa fa-github'></i></a>
                         </ul>
                     </section>
                 </div>

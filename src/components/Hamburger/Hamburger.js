@@ -12,11 +12,12 @@ const MenuBars = styled(FaBars)`
         background-image: url(${FaBars});
         height: 30px;
         width: 40px;
-        color: grey;
+        color: white;
         cursor: pointer;
-        position: absolute;
+        position: fixed;
         top: 0.6rem;
         right: 10px;
+        z-index: 999;
 
         &:hover {
             opacity: 0.3;

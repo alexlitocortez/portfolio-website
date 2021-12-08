@@ -71,6 +71,12 @@ strong {
         height: 24em;
         margin: 0;
     }
+
+    .about-text,
+    .about-text p {
+        line-height: 5rem;
+        font-size: 2.7rem;
+    }
 }
 
 
@@ -83,7 +89,24 @@ strong {
     .row {
         display: flex;
     }
+
+    .about-text {
+        margin-top: 3rem;
+        line-height: 3rem;
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.8rem;
+    }
 }
 
+@media only screen and (max-width: 446px) {
+    .about-text {
+        font-size: 0.9rem;
+    }
 
-
+    .about-text p {
+        font-size: 0.8rem;
+    }
+}

@@ -5,7 +5,7 @@ import curryPicture from '/Users/l/portfolio-website/src/Images/curry.jpg'
 function ProjectSection() {
     return (
         <div>
-            <section className='project-wrapper'>
+            <section id='projectsection' className='project-wrapper'>
                 <div className='projectWrapperZone'>
                     <h1 id='projectHeader'>Projects</h1>
                     <div className='cards'>
