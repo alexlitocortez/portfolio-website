@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import blogImageOne from '/Users/l/portfolio-website/src/Images/blog_image_1 copy.jpg';
 import blogImageTwo from '/Users/l/portfolio-website/src/Images/blog_image_2 copy.jpg';
 import blogImageThree from '/Users/l/portfolio-website/src/Images/blog_image_3 copy.jpg';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+
+
+
 
 function BlogSection() {
     return (
@@ -12,26 +18,27 @@ function BlogSection() {
                 <div className='blogWrapperZone'>
                     <h1 className='blogHeader'>Blog</h1>
                     <div className='blog-cards'>
-                        <div className='box'><Link to='/LearningCoding' style={{ textDecoration: 'none' }}>
+                        <div className='box'>
                             <img className='blogImage' src={blogImageOne} />
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Why I Chose Coding?</h1>
-                            </Link></div>
-                        <div className='box'><Link to='/Combining'>
+                        </div>
+                        <div className='box'>
                             <img className='blogImage' src={blogImageTwo} />
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Coding And Marketing</h1>
-                        </Link></div>
-                        <div className='box'><Link to='/Schedule'>
+                        </div>
+                        <div className='box'>
                             <img className='blogImage' src={blogImageThree} />
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Schedule For Learning</h1>
-                        </Link></div>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     )
 }
+
 
 export default BlogSection
