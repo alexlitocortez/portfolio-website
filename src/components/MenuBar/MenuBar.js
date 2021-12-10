@@ -56,16 +56,30 @@ const CloseIcon = styled(FaTimes)`
 
 
 function MenuBar({ open, setOpen }) {
-    
+
+    const anchorTags = document.querySelectorAll('a');
+    const container = document.getElementById('dropdownContainer');
+
+        anchorTags.forEach(el => {
+            el.addEventListener('click', function() {
+                container.style.display = 'none';
+            })
+        })
 
 
-    function showStuff(id, text, btn) {
-        document.getElementById(id).style.display = 'block';
-        // hide the lorem ipsum text
-        document.getElementById(text).style.display = 'none';
-        // hide the link
-        btn.style.display = 'none';
-    }
+        // const toggleElements = document.querySelectorAll('.toggle');
+        // toggleElements.forEach(el => {
+        // el.addEventListener('click', function() {
+        //     this.classList.toggle('active');
+        // });
+        // });
+
+        // anchorTags.forEach(function(a) {
+        //     anchorTags.addEventListener('click', () => {
+        //         container.style.display = 'none'
+        //     )}
+        //     }
+
 
     return (
         <div>
@@ -90,3 +104,4 @@ MenuBar.propTypes = {
 export default MenuBar
 
 // 1. If list item clicked, then dropdown container is gone
+// 2. But the problem is the dropdown container doesn't come back
