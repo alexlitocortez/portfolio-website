@@ -19,9 +19,13 @@
     color: #fff;
 }
 
-.notactive {
-    display: none;
+.hide {
+    opacity: 0;
 }
+
+
+/* position: absolute !important;
+top: -9999px; */
 
 
 @media screen and (max-width: 768px) {

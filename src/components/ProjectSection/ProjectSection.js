@@ -1,12 +1,13 @@
 import React from 'react';
 import './ProjectSection.css';
-import curryPicture from '/Users/l/portfolio-website/src/Images/curry.jpg'
+import curryPicture from '/Users/l/portfolio-website/src/Images/curry.jpg';
+import { useHistory, Link } from 'react-router-dom';
 
 function ProjectSection() {
     return (
         <div>
             <section id='projectsection' className='project-wrapper'>
-                <div className='projectWrapperZone'>
+                <div className='projectWrapperZone'><Link to='/warriorstats'>
                     <h1 id='projectHeader'>Projects</h1>
                     <div className='cards'>
                         <div className='card card-one'>
@@ -32,7 +33,7 @@ function ProjectSection() {
 
                         </div>
                     </div>
-                </div>
+                </Link></div>
             </section>
         </div>
     )

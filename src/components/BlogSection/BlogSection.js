@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogSection.css';
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom';
 
 
 // Images

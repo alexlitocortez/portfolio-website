@@ -24,7 +24,7 @@ const DropdownContainer = styled.nav`
         background-color: #3e3e3e;
         top: 0;
         transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-        transition: 0.3s ease-in-out;
+        transition: ease-in-out;
 
     li {
             padding-right: 1rem;
@@ -60,25 +60,15 @@ function MenuBar({ open, setOpen }) {
     const anchorTags = document.querySelectorAll('a');
     const container = document.getElementById('dropdownContainer');
 
-        anchorTags.forEach(el => {
-            el.addEventListener('click', function() {
-                container.style.display = 'none';
-            })
-        })
+    function vanish() {
+        container.classList.add('hide')
+    }
 
-
-        // const toggleElements = document.querySelectorAll('.toggle');
-        // toggleElements.forEach(el => {
-        // el.addEventListener('click', function() {
-        //     this.classList.toggle('active');
-        // });
-        // });
-
-        // anchorTags.forEach(function(a) {
-        //     anchorTags.addEventListener('click', () => {
-        //         container.style.display = 'none'
-        //     )}
-        //     }
+        // anchorTags.forEach(el => {
+        //     el.addEventListener('click', function() {
+        //         container.classList.add('hide');
+        //     })
+        // })
 
 
     return (
@@ -86,10 +76,10 @@ function MenuBar({ open, setOpen }) {
             <DropdownContainer id='dropdownContainer' open={open}>
                 <CloseIcon open={open} onClick={() => setOpen(!open)} />
                 <ul className='nav-list'>
-                    <li id='about' className='nav-list-item' onClick><HashLink smooth to='/#about'>About</HashLink></li>
-                    <li id='projects' className='nav-list-item' onClick><HashLink smooth to='/#projectsection'>Projects</HashLink></li>
-                    <li id='blog' className='nav-list-item' onClick><HashLink smooth to='/#blogsection'>Blog</HashLink></li>
-                    <li id='contact' className='nav-list-item' onClick><HashLink smooth to='/#contactsection'>Contact</HashLink></li>
+                    <li id='about' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#about'>About</HashLink></li>
+                    <li id='projects' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#projectsection'>Projects</HashLink></li>
+                    <li id='blog' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#blogsection'>Blog</HashLink></li>
+                    <li id='contact' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#contactsection'>Contact</HashLink></li>
                 </ul>
             </DropdownContainer>
             <hr />

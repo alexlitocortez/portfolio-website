@@ -9,9 +9,8 @@ const MenuBars = styled(FaBars)`
     @media screen and (max-width: 768px) {
         display: block;
         background-size: contain;
-        background-image: url(${FaBars});
         height: 30px;
-        width: 40px;
+        width: 2rem;
         color: white;
         cursor: pointer;
         position: fixed;
