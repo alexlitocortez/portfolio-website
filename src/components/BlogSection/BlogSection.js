@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogSection.css';
-import { useHistory, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 // Images
@@ -17,19 +17,18 @@ function BlogSection() {
                 <div className='blogWrapperZone'>
                     <h1 className='blogHeader'>Blog</h1>
                     <div className='blog-cards'>
-                        <div className='box'><Link to='/learningcoding'>
-                            <img className='blogImage' src={blogImageOne} />
+                        <div className='box'>
+                            <img className='blogImage' src={blogImageOne} alt='first blog graphic'/>
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Why I Chose Coding?</h1>
-                            <button></button>
-                        </Link></div>
+                        </div>
                         <div className='box'><Link to='/combining'>
-                            <img className='blogImage' src={blogImageTwo} />
+                            <img className='blogImage' src={blogImageTwo} alt='second blog graphic'/>
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Coding And Marketing</h1>
                         </Link></div>
                         <div className='box'><Link to='/schedule'>
-                            <img className='blogImage' src={blogImageThree} />
+                            <img className='blogImage' src={blogImageThree} alt='third blog graphic'/>
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Schedule For Learning</h1>
                         </Link></div>

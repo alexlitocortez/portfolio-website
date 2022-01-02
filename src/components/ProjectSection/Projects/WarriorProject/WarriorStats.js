@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import './WarriorStats.css';
 
-
-
 // Warrior images
 import curry from '/Users/l/portfolio-website/src/components/ProjectSection/Projects/WarriorProject/curry.jpg';
 import oubre from '/Users/l/portfolio-website/src/components/ProjectSection/Projects/WarriorProject/oubre.jpg';

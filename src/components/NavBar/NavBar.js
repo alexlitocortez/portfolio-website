@@ -8,7 +8,7 @@ function NavBar() {
         <div>
             <nav className='NavBar'>
                 <ul className='NavBar-list'>
-                    <li><Link smooth to='/#herosection'>About</Link></li>
+                    <li><Link smooth to='/#about'>About</Link></li>
                     <li><Link smooth to='/#projectsection'>Projects</Link></li>
                     <li><Link smooth to='/#blogsection'>Blog</Link></li>
                     <li><Link smooth to='/#contactsection'>Contact</Link></li>

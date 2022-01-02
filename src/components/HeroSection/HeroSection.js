@@ -5,7 +5,7 @@ import myImage from '/Users/l/portfolio-website/src/Images/caricature.jpg';
 function HeroSection() {
     return (
         <div>
-            <section id='herosection'>
+            <section id='about'>
                 <div className='container'>
                     <div className='row'>
                         <div className='fit'>

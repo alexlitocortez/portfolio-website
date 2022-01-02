@@ -1,6 +1,5 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { bool, func } from 'prop-types';
 import styled from 'styled-components';
 
 const MenuBars = styled(FaBars)`
@@ -26,6 +25,7 @@ const MenuBars = styled(FaBars)`
 `;
 
 
+
 function Hamburger({ open, setOpen }) {
 
     return (
@@ -35,9 +35,7 @@ function Hamburger({ open, setOpen }) {
     )
 }
 
-Hamburger.propTypes = {
-    open: bool.isRequired,
-    setOpen: func.isRequired
-}
-
 export default Hamburger
+
+
+

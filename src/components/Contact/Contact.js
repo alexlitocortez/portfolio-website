@@ -23,11 +23,11 @@ function Contact() {
                                     <input type='text' name='subject' id='subject' placeholder='Subject' />
                                 </div>
                                 <div className='col-12'>
-                                    <textarea name='message' id='message' placeholder='Message'></textarea>
+                                    <textarea name='message' id='message' placeholder='Message' />
                                 </div>
                                 <div className='col-12'>
                                     <ul className='list-button'>
-                                        <li><input type='submit' value='Send Message' /></li>
+                                        <input type='submit' value='Send Message' />
                                     </ul>
                                 </div>
                             </div>

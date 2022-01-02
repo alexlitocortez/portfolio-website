@@ -2,10 +2,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { bool } from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import './MenuBar.css';
-import { Link } from 'react-router-dom';
 
 
 const DropdownContainer = styled.nav`
@@ -55,31 +53,17 @@ const CloseIcon = styled(FaTimes)`
 
 
 
-function MenuBar({ open, setOpen }) {
-
-    const anchorTags = document.querySelectorAll('a');
-    const container = document.getElementById('dropdownContainer');
-
-    function vanish() {
-        container.classList.add('hide')
-    }
-
-        // anchorTags.forEach(el => {
-        //     el.addEventListener('click', function() {
-        //         container.classList.add('hide');
-        //     })
-        // })
-
+function MenuBar({ open, setOpen }) {    
 
     return (
         <div>
-            <DropdownContainer id='dropdownContainer' open={open}>
+            <DropdownContainer id='container' open={open}>
                 <CloseIcon open={open} onClick={() => setOpen(!open)} />
-                <ul className='nav-list'>
-                    <li id='about' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#about'>About</HashLink></li>
-                    <li id='projects' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#projectsection'>Projects</HashLink></li>
-                    <li id='blog' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#blogsection'>Blog</HashLink></li>
-                    <li id='contact' className='nav-list-item' onClick={vanish}><HashLink smooth to='/#contactsection'>Contact</HashLink></li>
+                <ul className='nav-list' id='dropdownContainer'>
+                    <li id='about' className='nav-list-item' onClick={() => setOpen(!open)}><HashLink smooth to='/#about'>About</HashLink></li>
+                    <li id='projects' className='nav-list-item' onClick={() => setOpen(!open)}><HashLink smooth to='/#projectsection'>Projects</HashLink></li>
+                    <li id='blog' className='nav-list-item' onClick={() => setOpen(!open)}><HashLink smooth to='/#blogsection'>Blog</HashLink></li>
+                    <li id='contact' className='nav-list-item' onClick={() => setOpen(!open)}><HashLink smooth to='/#contactsection'>Contact</HashLink></li>
                 </ul>
             </DropdownContainer>
             <hr />
@@ -87,11 +71,4 @@ function MenuBar({ open, setOpen }) {
     )
 }
 
-MenuBar.propTypes = {
-    open: bool.isRequired,
-}
-
 export default MenuBar
-
-// 1. If list item clicked, then dropdown container is gone
-// 2. But the problem is the dropdown container doesn't come back
