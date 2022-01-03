@@ -49,9 +49,6 @@
     padding: 2rem;
 }
 
-.features-two {
-}
-
 @media screen and (min-width: 768px) and (max-width: 2800px) {
     .card {
         width: 90vw;

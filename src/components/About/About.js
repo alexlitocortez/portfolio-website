@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeroSection.css';
+import './About.css';
 import myImage from '/Users/l/portfolio-website/src/Images/caricature.jpg';
 
 function About() {

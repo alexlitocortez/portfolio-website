@@ -17,11 +17,11 @@ function BlogSection() {
                 <div className='blogWrapperZone'>
                     <h1 className='blogHeader'>Blog</h1>
                     <div className='blog-cards'>
-                        <div className='box'>
+                        <div className='box'><Link smooth to='/learningcoding'>
                             <img className='blogImage' src={blogImageOne} alt='first blog graphic'/>
                             <hr className='blog-hr' />
                             <h1 className='blog-header'>Why I Chose Coding?</h1>
-                        </div>
+                        </Link></div>
                         <div className='box'><Link to='/combining'>
                             <img className='blogImage' src={blogImageTwo} alt='second blog graphic'/>
                             <hr className='blog-hr' />
