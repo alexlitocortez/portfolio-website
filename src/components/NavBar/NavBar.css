@@ -1,80 +1,76 @@
-
-
 .NavBar {
-    background-color: #282828;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 998;
-    cursor: pointer;
-    height: 3.5em;
-    line-height: 3.5em;
-    padding-bottom: 1rem;
+  background-color: white;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+  cursor: pointer;
+  height: 3.5em;
+  line-height: 3.5em;
+  padding-bottom: 1rem;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: black;
 }
 
 .NavBar-list {
-    list-style-type: none;
-    margin-bottom: 0;
-    padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .NavBar li {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    font-weight: 600;
-    border-radius: 8px;
-    height: 2.5em;
-    line-height: 2.5em;
-    padding: 0 1.25em;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  font-weight: 600;
+  border-radius: 8px;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding: 0 1.25em;
 }
 
 @media only screen and (min-width: 2000px) {
-    .NavBar {
-        height: 7em;
-        padding-bottom: 2em;
-        line-height: 1em;
-    }
+  .NavBar {
+    height: 7em;
+    padding-bottom: 2em;
+    line-height: 1em;
+  }
 
-    .NavBar li {
-        font-size: 2.7rem;
-        position: relative;
-    }
+  .NavBar li {
+    font-size: 2.7rem;
+    position: relative;
+  }
 }
 
 @media only screen and (max-width: 2000px) {
-    .NavBar li {
-        font-size: 1.6rem;
-        position: relative;
-        bottom: 0.3rem;
-    }
+  .NavBar li {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 0.3rem;
+  }
 }
 
-
 @media only screen and (max-width: 816px) {
-    .NavBar {
-        height: 3.5em;
-        line-height: 2em;
-    }
+  .NavBar {
+    height: 3.5em;
+    line-height: 2em;
+  }
 
-    .NavBar li {
-        font-size: 1rem;
-        position: relative;
-        top: 0.5rem;
-    }
+  .NavBar li {
+    font-size: 1rem;
+    position: relative;
+    top: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .NavBar-list {
-        display: none;
-    }
+  .NavBar-list {
+    display: none;
+  }
 }
-

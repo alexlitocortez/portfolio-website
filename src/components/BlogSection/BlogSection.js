@@ -19,17 +19,14 @@ function BlogSection() {
                     <div className='blog-cards'>
                         <div className='box'><Link smooth to='/learningcoding'>
                             <img className='blogImage' src={blogImageOne} alt='first blog graphic'/>
-                            <hr className='blog-hr' />
                             <h1 className='blog-header'>Why I Chose Coding?</h1>
                         </Link></div>
                         <div className='box'><Link to='/combining'>
                             <img className='blogImage' src={blogImageTwo} alt='second blog graphic'/>
-                            <hr className='blog-hr' />
                             <h1 className='blog-header'>Coding And Marketing</h1>
                         </Link></div>
                         <div className='box'><Link to='/schedule'>
                             <img className='blogImage' src={blogImageThree} alt='third blog graphic'/>
-                            <hr className='blog-hr' />
                             <h1 className='blog-header'>Schedule For Learning</h1>
                         </Link></div>
                     </div>

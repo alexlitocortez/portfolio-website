@@ -5,10 +5,11 @@ import myImage from '/Users/l/portfolio-website/src/Images/caricature.jpg';
 function About() {
     return (
         <div>
-            <section id='about'>
+            <section id='aboutsection'>
                 <div className='container'>
                     <div className='row'>
                         <div className='fit'>
+                            <h1>Let's Build Together</h1>
                             <img className='heroImage' src={myImage} />
                         </div>
                         <div className='about-text'>

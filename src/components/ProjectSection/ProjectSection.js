@@ -14,7 +14,6 @@ function ProjectSection() {
                         <div className='card'><Link to='/warriorstats'>
                             <img className='projectImage' src={curryPicture} />
                             <h1>2020-2021 Golden State Warriors</h1>
-                            <hr className='project-hr' />
                             <div className='projectDescription'>
                                 <p>
                                     An app that shows the 2020-2021 Golden State Warriors' 
@@ -31,7 +30,6 @@ function ProjectSection() {
                         <div className='card card-two'><a href='https://rhafaelherrera.vercel.app/'>
                             <img className='projectImage' src={civilEngineer} />
                             <h1>Civil Engineer Portfolio Website</h1>
-                            <hr className='project-hr' />
                             <div className='projectDescription'>
                                 <p className='card-two-description'>
                                     A portfolio website for a civil engineer displaying projects 

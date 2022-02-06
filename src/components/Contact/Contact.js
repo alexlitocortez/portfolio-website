@@ -8,7 +8,7 @@ function Contact() {
             <section id='contact' className='contact-wrapper'>
                 <div id='contactsection' className='contact-container'>
                     <header>
-                        <h2 className='contact-header'>Talk to me.</h2>
+                        <h2 className='contact-header'>Let's Get Started</h2>
                     </header>
                     <div className='contact-row'>
                         <form method='post'>
@@ -26,20 +26,15 @@ function Contact() {
                                     <textarea name='message' id='message' placeholder='Message' />
                                 </div>
                                 <div className='col-12'>
-                                    <ul className='list-button'>
-                                        <input type='submit' value='Send Message' />
-                                    </ul>
+                                    <button className='submit-button'>Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <section className='social-media-section'>
                         <hr className='contact-hr' />
-                        <h3>Social Media</h3>
-                        <ul className='social-icons'>
-                            <a href='https://www.linkedin.com/in/amcortez92/' target="_blank"><i className="fa fa-linkedin"></i></a>
-                            <a href='https://github.com/alexlitocortez' target="_blank"><i className='fa fa-github'></i></a>
-                        </ul>
+                        <a href='https://www.linkedin.com/in/amcortez92'><span className='fa fa-linkedin'></span></a>
+                        <a href='https://github.com/alexlitocortez'><span className='fa fa-github'></span></a>
                     </section>
                 </div>
             </section>
