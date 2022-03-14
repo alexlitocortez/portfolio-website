@@ -1,24 +1,13 @@
-import React from 'react';
-import './NavBar.css';
-import { HashLink as Link } from 'react-router-hash-link';
-
+import React from 'react'
+import './NavBar.css'
 
 function NavBar() {
-    return (
-        <div>
-            <nav className='NavBar'>
-                <ul className='NavBar-list'>
-                    <li><Link smooth to='/#aboutsection'>About</Link></li>
-                    <li><Link smooth to='/#projectsection'>Projects</Link></li>
-                    <li><Link smooth to='/#blogsection'>Blog</Link></li>
-                    <li><Link smooth to='/#contactsection'>Contact</Link></li>
-                </ul>
-            </nav>
-        </div>
-    )
+  return (
+    <div className='navbar-container'>
+        <p>Alex Cortez</p>
+        <p>Frontend Engineer</p>
+    </div>
+  )
 }
 
 export default NavBar
-
-
-

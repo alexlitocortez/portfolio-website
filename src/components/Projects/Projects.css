@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+  color: white;
+  padding: 3rem;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.project-github-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-github-icon {
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+p {
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+}
+
+ul {
+  text-align: center;
+  color: white;
+  padding: 0.5rem;
+}
