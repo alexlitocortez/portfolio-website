@@ -8,11 +8,15 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 3rem;
+  margin-bottom: 3rem;
 }
 
 .project-github-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 50vw;
+  color: white;
 }
 
 .project-github-icon {
@@ -25,16 +29,30 @@ h1 {
 p {
   color: white;
   text-align: center;
+  font-family: "Hubballi", sans-serif;
+  font-size: 1.5rem;
   padding: 3rem;
 }
 
 h3 {
   text-align: center;
   color: white;
+  font-family: "Hubballi", sans-serif;
+  margin-bottom: 8rem;
 }
 
-ul {
-  text-align: center;
-  color: white;
-  padding: 0.5rem;
+.github-container {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.vercel-container {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+}
+
+.v-s {
+  display: flex;
 }
