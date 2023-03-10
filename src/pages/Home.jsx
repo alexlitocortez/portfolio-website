@@ -1,17 +1,24 @@
-import React from 'react'
-import './Home.css'
-import NavBar from '../components/NavBar/NavBar'
-import Projects from '../components/Projects/Projects'
-import Footer from '../components/Footer/Footer'
+import React from "react";
+import NavBar from "../components/NavBar/NavBar";
+import Projects from "../components/Projects/Projects";
+import Footer from "../components/Footer/Footer";
+import styled from "styled-components";
+
+export const StyledDiv = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #171d20;
+`;
 
 function Home() {
   return (
-    <div className='home-container'>
-        <NavBar />
-        <Projects />
-        <Footer />
-    </div>
-  )
+    <StyledDiv>
+      <NavBar />
+      <Projects />
+      <Footer />
+    </StyledDiv>
+  );
 }
 
-export default Home
+export default Home;
