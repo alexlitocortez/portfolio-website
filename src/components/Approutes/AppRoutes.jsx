@@ -1,7 +1,8 @@
 import { useRoutes } from "react-router-dom";
 import Home from "../../pages/Home";
 import Blog from "../../pages/Blog";
-import SwitchingCareeers from "/Users/l/portfolio-website/src/pages/Blog Pages/HowISwitchedCareers2TimesAndGotADeveloperJob";
+import SwitchingCareers from "../../pages/Blog Pages/HowISwitchedCareers2TimesAndGotADeveloperJob";
+import ReactBreadcrumbs from "../../pages/Blog Pages/ReactBreadcrumbs/ReactBreadcrumbs";
 
 export const ROUTES = [
   {
@@ -11,17 +12,24 @@ export const ROUTES = [
   },
   {
     name: "Blog",
-    path: "/blog",
+    path: "blog",
     element: <Blog />,
-  },
-  {
-    name: "Switching Careers",
-    path: "/blog/how-i-switched-careers-2-times-and-got-a-developer-job",
-    element: <SwitchingCareeers />,
+    children: [
+      {
+        name: "Switching Careers",
+        path: "switching-careers",
+        element: <SwitchingCareers />,
+      },
+      {
+        name: "React Breadcrumbs",
+        path: "react-breadcrumbs",
+        element: <ReactBreadcrumbs />,
+      },
+    ],
   },
 ];
 
 export const AppRoutes = () => {
-  const routes = useRoutes(ROUTES);
-  return routes;
+  const newRoutes = useRoutes(ROUTES);
+  return newRoutes;
 };
