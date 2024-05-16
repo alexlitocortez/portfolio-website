@@ -1,8 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import Home from "../../pages/Home";
 import Blog from "../../pages/Blog";
-import SwitchingCareers from "../../pages/Blog Pages/HowISwitchedCareers2TimesAndGotADeveloperJob";
-import ReactBreadcrumbs from "../../pages/Blog Pages/ReactBreadcrumbs/ReactBreadcrumbs";
 
 export const ROUTES = [
   {
@@ -13,17 +11,17 @@ export const ROUTES = [
   {
     name: "Blog",
     path: "blog",
-    element: <Blog />,
+    // element: <Blog />,
     children: [
       {
         name: "Switching Careers",
         path: "switching-careers",
-        element: <SwitchingCareers />,
+        // element: <SwitchingCareers />,
       },
       {
         name: "React Breadcrumbs",
         path: "react-breadcrumbs",
-        element: <ReactBreadcrumbs />,
+        // element: <ReactBreadcrumbs />,
       },
     ],
   },

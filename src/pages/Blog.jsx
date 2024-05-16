@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import firstBlog from "../assets/switching careers thumbnail.jpeg";
-import SwitchingCareers from "../pages/Blog Pages/HowISwitchedCareers2TimesAndGotADeveloperJob";
+// import SwitchingCareers from "../pages/Blog Pages/HowISwitchedCareers2TimesAndGotADeveloperJob";
 import { useNavigate } from "react-router-dom";
 import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
 import { matchRoutes, useLocation, Outlet } from "react-router-dom";
@@ -73,7 +73,7 @@ const Blog = () => {
       <Container
         style={{ display: "flex", justifyContent: "center", margin: "auto" }}
       >
-        <button
+        {/* <button
           style={{
             cursor: "pointer",
             color: "#fff",
@@ -89,7 +89,7 @@ const Blog = () => {
           onClick={() => navigate("/blog/switching-careers")}
         >
           Switching Careers 2 Times
-        </button>
+        </button> */}
         <button
           style={{
             cursor: "pointer",

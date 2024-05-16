@@ -34,14 +34,14 @@ export const NavBarLink = styled.a`
 function NavBar() {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/blog");
-  };
+  // const handleClick = () => {
+  //   navigate("/blog");
+  // };
 
   return (
     <NavBarContainer>
       <p>Alex Cortez</p>
-      <NavBarLink onClick={handleClick}>Blog</NavBarLink>
+      {/* <NavBarLink onClick={handleClick}>Blog</NavBarLink> */}
     </NavBarContainer>
   );
 }
