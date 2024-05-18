@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export const NavBarContainer = styled.nav`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   color: white;
   padding: 1rem;
@@ -40,7 +41,8 @@ function NavBar() {
 
   return (
     <NavBarContainer>
-      <p>Alex Cortez</p>
+      {/* <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Alex Cortez</p>
+      <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Software Engineer</p> */}
       {/* <NavBarLink onClick={handleClick}>Blog</NavBarLink> */}
     </NavBarContainer>
   );
