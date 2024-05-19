@@ -19,7 +19,7 @@ function Footer() {
         </a>
       </div>
       <div>
-        <h5>Alex Cortez ©2023</h5>
+        <h5>Alex Cortez ©2024</h5>
       </div>
     </div>
   );

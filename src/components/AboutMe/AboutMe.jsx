@@ -73,18 +73,17 @@ const imageVariants = {
 function AboutMe() {
     return (
         <StyledDiv>
-
             <Box sx={{ flexGrow: 1 }}>
                 <ImageContainer>
                     <AnimatedBorder>
                         <motion.img
-                            src={avatar} // Replace with your image path
+                            src={avatar}
                             alt="Avatar pic"
                             initial="initial"
                             animate="animate"
                             whileHover="hover"
                             variants={imageVariants}
-                            transition={{ duration: 2, ease: "easeInOut" }} // Adjust duration and easing as needed
+                            transition={{ duration: 2, ease: "easeInOut" }}
                             style={{ width: '300px', height: '300px', border: '1.5rem solid #152238', borderRadius: '90%' }} // Adjust image size as needed
                         />
                     </AnimatedBorder>

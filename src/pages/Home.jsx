@@ -4,6 +4,7 @@ import Projects from "../components/Projects/Projects";
 import Footer from "../components/Footer/Footer";
 import styled from "styled-components";
 import AboutMe from "../components/AboutMe/AboutMe";
+import Experience from "../components/Experience/Experience";
 
 export const StyledDiv = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ function Home() {
       <NavBar />
       <AboutMe />
       <Projects />
+      <Experience />
       <Footer />
     </StyledDiv>
   );
