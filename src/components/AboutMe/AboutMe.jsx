@@ -3,15 +3,8 @@ import styled, { keyframes } from "styled-components";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
-import avatar from '../../assets/avatar.jpeg'
-
-
-export const StyledDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    flex-direction: column;
-`;
+import avatar from '../../assets/avatar.jpeg';
+import useIntersectionObserver from '../IntersectionObserver/IntersectionObserver';
 
 const rotate = keyframes`
   0% {
@@ -70,9 +63,28 @@ const imageVariants = {
     hover: { scale: 1.1 },
 };
 
-function AboutMe() {
+function AboutMe({ id }) {
+    const [setRef, isIntersecting] = useIntersectionObserver({
+        threshold: 0.1,
+    });
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     return (
-        <StyledDiv>
+        <motion.div
+            ref={setRef}
+            initial="hidden"
+            animate={isIntersecting ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{ duration: 0.5 }}
+            id={id}
+            style={{
+                padding: '20px',
+            }}
+        >
             <Box sx={{ flexGrow: 1 }}>
                 <ImageContainer>
                     <AnimatedBorder>
@@ -88,30 +100,31 @@ function AboutMe() {
                         />
                     </AnimatedBorder>
                 </ImageContainer>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={6} container style={{ justifyContent: 'center' }}>
-                        <div>
-                            <p style={{ textAlign: 'left', padding: 0, fontWeight: 'bolder', fontSize: '5rem' }}>Alex Cortez</p>
-                            <p style={{ textAlign: 'left', padding: 0, fontWeight: 'bolder', fontSize: '3rem' }}>Software Engineer</p>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} md={6} container alignItems='center' style={{ justifyContent: 'center', width: '50vw' }}>
-                        <p style={{ textAlign: 'left', fontSize: '1.5rem' }}>
-                            I'm a self-taught developer who has professional experience developing and designing web applications. A majority of my experience
-                            includes frontend development but I have experience with backend development contributing to full-stack applications.
+                <Grid container spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    {/* <Grid item xs={12} md={6} container style={{ justifyContent: 'center', alignItems: 'center' }}> */}
+                    <div>
+                        <p style={{ padding: 0, fontWeight: 'bolder', fontSize: '5rem' }}>Alex Cortez</p>
+                        <p style={{ padding: 0, fontWeight: 'bolder', fontSize: '3rem' }}>Software Engineer</p>
+                    </div>
+                    {/* </Grid> */}
+                    {/* <Grid item xs={12} md={6} container alignItems='center' style={{ justifyContent: 'center' }}> */}
+                    <div style={{ margin: 'auto', width: '50vw' }}>
+                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
+                            Hello! I'm a self-taught developer who has professional experience developing and designing web applications. Some of the projects
+                            I've contributed to include a real-time machine learning platform, an internal pricing application, and a generative AI application.
                         </p>
-                        <p style={{ textAlign: 'left', fontSize: '1.5rem' }}>
-                            I love to learn about cutting-edge technologies and playing around with them. Besides development, I love to spend time in the gymm lifting weights
-                            or watching a good TV show. If you want to contact me about professional opportunties or just want to chit-chat my contact information is on the bottom
-                            of this site.
+                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
+                            My main focus these days is finding ways to become a better developer. That includes learning new frameworks and understanding algorithms better.
                         </p>
-                    </Grid>
+                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
+                            When I'm not at my computer, I love to spend time lifting weights, playing basketball,
+                            or watching a good TV show. If you want to connect, my contact information is located on the top and bottom of this site.
+                        </p>
+                    </div>
+                    {/* </Grid> */}
                 </Grid>
             </Box>
-
-
-            <br />
-        </StyledDiv >
+        </motion.div>
     )
 }
 

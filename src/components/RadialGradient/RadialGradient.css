@@ -1,0 +1,12 @@
+/* src/Gradient.css */
+.gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Make sure the gradient doesn't interfere with clicking */
+    z-index: 1000;
+    /* Ensure the gradient is above other elements */
+}

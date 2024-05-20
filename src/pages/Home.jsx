@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import styled from "styled-components";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Experience from "../components/Experience/Experience";
+import RadialGradient from "../components/RadialGradient/RadialGradient"
 
 export const StyledDiv = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ export const StyledDiv = styled.div`
 function Home() {
   return (
     <StyledDiv>
+      {/* <RadialGradient /> */}
       <NavBar />
       <AboutMe />
       <Projects />

@@ -4,6 +4,8 @@ import ReactPlayer from 'react-player'
 import { FiGithub } from 'react-icons/fi'
 import { SiVercel } from 'react-icons/si'
 import styled from "styled-components";
+import { motion } from 'framer-motion';
+import useIntersectionObserver from '../IntersectionObserver/IntersectionObserver'
 
 export const StyledDiv = styled.div`
     display: flex;
@@ -13,46 +15,49 @@ export const StyledDiv = styled.div`
     flex-direction: column;
 `;
 
-function Projects() {
+function Projects({ id }) {
+  const [setRef, isIntersecting] = useIntersectionObserver({
+    threshold: 0.1,
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className='project-container'>
-      <h1>Projects</h1>
+    <motion.div
+      ref={setRef}
+      initial="hidden"
+      animate={isIntersecting ? 'visible' : 'hidden'}
+      variants={variants}
+      transition={{ duration: 0.5 }}
+      id={id}
+      style={{
+        padding: '20px',
+      }}
+    >
+      <div className='project-container'>
+        <h1>Projects</h1>
 
-      <h2>SaaS Marketplace</h2>
-      <div className='project-github-container'>
-        <div className='github-container'>
-          <a href='https://github.com/alexlitocortez/student-api' target='_blank' style={{ color: 'white' }}>
-            <FiGithub size={30} className='project-github-icon' />
-          </a>
-        </div>
-      </div>
-      <p>Scraping and displaying SaaS from different marketplaces</p>
-      <h3>Tech Stack: Next.js, TypeScript, Prisma, TRPC, Tailwind CSS, NextAuth.js</h3>
-
-      {/* <h1>Civil Engineer Portfolio</h1>
-      <div className='video-container'>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=U3FJW2kTZ2o"
-        />
-      </div>
-      <div className='project-github-container'>
-        <div className='github-container'>
-          <a href='https://github.com/alexlitocortez/rhafaelherrera' target='_blank' style={{ color: 'white' }}>
-            <FiGithub size={30} className='project-github-icon' />
-          </a>
-        </div>
-        <div className='vercel-container'>
-          <div className='v-s'>
-            <a href='https://rhafaelherrera.vercel.app/' target='_blank' style={{ color: 'white' }}>
-              <SiVercel size={30} className='project-github-icon' />
+        <h2>SaaS Marketplace</h2>
+        <div className='project-github-container'>
+          <div className='github-container'>
+            <a href='https://github.com/alexlitocortez/student-api' target='_blank' style={{ color: 'white' }}>
+              <FiGithub size={30} className='project-github-icon' />
             </a>
-            <p style={{ padding: 0, fontSize: '1rem' }}>(Live Demo)</p>
           </div>
         </div>
+        <p>Scraping and displaying SaaS from different marketplaces</p>
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: '16px', padding: '20px' }}>
+          <img src={require('../../assets/nextjs-icon.svg').default} alt='mySvgImage' style={{ height: 'auto', width: '100px' }} />
+          <img src={require('../../assets/typescript-icon-round.svg').default} style={{ height: 'auto', width: '100px' }} alt='mySvgImage' />
+          <img src={require('../../assets/prisma.svg').default} alt='mySvgImage' style={{ height: 'auto', width: '100px' }} />
+          <img src={require('../../assets/trpc.svg').default} alt='mySvgImage' style={{ height: 'auto', width: '100px' }} />
+          <img src={require('../../assets/tailwindcss-icon.svg').default} alt='mySvgImage' style={{ height: 'auto', width: '100px' }} />
+        </div>
       </div>
-      <p>Portfolio site displaying a civil engineer's projects</p>
-      <h3>Tech Stack: JavaScript, React, HTML, CSS, Styled Components</h3> */}
-    </div>
+    </motion.div>
   )
 }
 

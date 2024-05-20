@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 export const NavBarContainer = styled.nav`
   display: flex;
@@ -35,15 +36,9 @@ export const NavBarLink = styled.a`
 function NavBar() {
   const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   navigate("/blog");
-  // };
-
   return (
     <NavBarContainer>
-      {/* <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Alex Cortez</p>
-      <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Software Engineer</p> */}
-      {/* <NavBarLink onClick={handleClick}>Blog</NavBarLink> */}
+      <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Contact me <ArrowRightAltIcon /> <span style={{ textDecoration: 'underline', fontSize: '1.2rem' }}>alexlitocortez@gmail.com </span></p>
     </NavBarContainer>
   );
 }
