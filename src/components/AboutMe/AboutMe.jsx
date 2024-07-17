@@ -134,58 +134,41 @@ function AboutMe({ id }) {
     };
 
     return (
-        <motion.div
-            ref={setRef}
-            initial="hidden"
-            animate={isIntersecting ? 'visible' : 'hidden'}
-            variants={variants}
-            transition={{ duration: 0.5 }}
-            id={id}
-            style={{
-                padding: '20px',
-            }}
-        >
-            <Box sx={{ flexGrow: 1 }}>
-                <ImageContainer>
-                    <AnimatedBorder>
-                        <motion.img
-                            src={avatar}
-                            alt="Avatar pic"
-                            initial="initial"
-                            animate="animate"
-                            whileHover="hover"
-                            variants={imageVariants}
-                            transition={{ duration: 2, ease: "easeInOut" }}
-                            style={{ width: '300px', height: '300px', border: '1.5rem solid #152238', borderRadius: '90%' }} // Adjust image size as needed
-                        />
-                    </AnimatedBorder>
-                </ImageContainer>
-                <Grid container spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    <div>
-                        {/* <p style={{ fontWeight: 'bolder', fontSize: '5rem' }}>Alex Cortez</p> */}
-                        <Title>Alex Cortez</Title>
-                    </div>
-                    {/* <div style={{ margin: 'auto', width: '50vw' }}> */}
+        <Box sx={{ flexGrow: 1 }}>
+            <ImageContainer>
+                <motion.img
+                    src={avatar}
+                    alt="Avatar pic"
+                    initial="initial"
+                    animate="animate"
+                    whileHover="hover"
+                    variants={imageVariants}
+                    transition={{ duration: 2, ease: "easeInOut" }}
+                    style={{ width: '300px', height: '300px', border: '1.5rem solid #152238', borderRadius: '90%' }} // Adjust image size as needed
+                />
+            </ImageContainer>
+            <Grid container spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div>
+                    <Title>Alex Cortez</Title>
+                </div>
+                <Content>
+                    <p>
+                        Hello! I'm a self-taught developer who has professional experience developing and designing web applications. Some of the projects
+                        I've contributed to include a real-time machine learning platform, an internal pricing application, and a generative AI application.
+                    </p>
                     {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
-                    <Content>
-                        <p>
-                            Hello! I'm a self-taught developer who has professional experience developing and designing web applications. Some of the projects
-                            I've contributed to include a real-time machine learning platform, an internal pricing application, and a generative AI application.
-                        </p>
-                        {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
-                        <p>
-                            My main focus these days is finding ways to become a better developer. That includes learning new frameworks, developing algorithms, and creating projects.
-                        </p>
-                        {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
-                        <p>
-                            When I'm not at my computer, I love to spend time lifting weights, playing basketball,
-                            or watching a good TV show. If you want to connect, my contact information is located on the top and bottom of this site.
-                        </p>
-                        {/* </div> */}
-                    </Content>
-                </Grid>
-            </Box>
-        </motion.div >
+                    <p>
+                        My main focus these days is finding ways to become a better developer. That includes learning new frameworks, developing algorithms, and creating projects.
+                    </p>
+                    {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
+                    <p>
+                        When I'm not at my computer, I love to spend time lifting weights, playing basketball,
+                        or watching a good TV show. If you want to connect, my contact information is located on the top and bottom of this site.
+                    </p>
+                    {/* </div> */}
+                </Content>
+            </Grid>
+        </Box>
     )
 }
 

@@ -65,7 +65,7 @@ const Experience = ({ id }) => {
                         </Grid>
                         <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
                             <div>
-                                <p style={{ padding: 0, margin: 0 }}>Fractal Analytics Inc.</p>
+                                <p style={{ padding: 0, margin: 0, fontWeight: 'bold' }}>Fractal Analytics Inc.</p>
                                 <p style={{ padding: 0, margin: 0 }}>Software Engineer</p>
                             </div>
                         </Grid>
