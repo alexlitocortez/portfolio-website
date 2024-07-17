@@ -12,6 +12,26 @@ export const StyledDiv = styled.div`
     flex-direction: column;
 `;
 
+const Title = styled.h1`
+  font-size: 3.5rem;
+
+  @media (max-width: 1200px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
+`;
+
 const Experience = ({ id }) => {
     const [setRef, isIntersecting] = useIntersectionObserver({
         threshold: 0.1,
@@ -36,12 +56,12 @@ const Experience = ({ id }) => {
             <StyledDiv>
                 <Box sx={{
                     flexGrow: 1,
-                    margin: 2,
+                    margin: 1,
                 }}
                 >
                     <Grid container spacing={2} style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
                         <Grid item xs={12} md={4} container alignItems='top' style={{ justifyContent: 'center' }}>
-                            <h1>Experience</h1>
+                            <Title>Experience</Title>
                         </Grid>
                         <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
                             <div>
@@ -49,8 +69,16 @@ const Experience = ({ id }) => {
                                 <p style={{ padding: 0, margin: 0 }}>Software Engineer</p>
                             </div>
                         </Grid>
-                        <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'flex-start' }}>
+                        <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
                             <p style={{ margin: 0 }}>June 2022 - February 2024</p>
+                        </Grid>
+                        <Grid item xs={12} md={4} container alignItems='top' style={{ justifyContent: 'center' }}>
+                        </Grid>
+                        <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
+                            <p style={{ padding: 0, margin: 0 }}>Freelance Developer</p>
+                        </Grid>
+                        <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
+                            <p style={{ margin: 0 }}>March 2022 - May 2022</p>
                         </Grid>
                     </Grid>
                 </Box>

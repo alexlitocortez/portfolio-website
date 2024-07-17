@@ -47,7 +47,7 @@ const AnimatedBorder = styled(motion.div)`
     height: 100%;
     border-radius: 50%;
     border: 5px solid transparent;
-    animation: ${rotate} 4s linear 360;
+    animation: ${rotate} 2s linear 360;
   }
 `;
 
@@ -55,6 +55,66 @@ const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+
+const Title = styled.p`
+  font-weight: bolder;
+  font-size: 5rem;
+
+  @media (max-width: 1200px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
+`;
+
+const Content = styled.div`
+  margin: auto;
+  width: 50vw;
+
+  p {
+    padding: 0;
+    text-align: left;
+    font-size: 1.5rem;
+
+    @media (max-width: 1200px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 1.125rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 60vw;
+  }
+
+  @media (max-width: 768px) {
+    width: 70vw;
+  }
+
+  @media (max-width: 576px) {
+    width: 80vw;
+  }
 `;
 
 const imageVariants = {
@@ -101,30 +161,31 @@ function AboutMe({ id }) {
                     </AnimatedBorder>
                 </ImageContainer>
                 <Grid container spacing={2} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                    {/* <Grid item xs={12} md={6} container style={{ justifyContent: 'center', alignItems: 'center' }}> */}
                     <div>
-                        <p style={{ padding: 0, fontWeight: 'bolder', fontSize: '5rem' }}>Alex Cortez</p>
-                        <p style={{ padding: 0, fontWeight: 'bolder', fontSize: '3rem' }}>Software Engineer</p>
+                        {/* <p style={{ fontWeight: 'bolder', fontSize: '5rem' }}>Alex Cortez</p> */}
+                        <Title>Alex Cortez</Title>
                     </div>
-                    {/* </Grid> */}
-                    {/* <Grid item xs={12} md={6} container alignItems='center' style={{ justifyContent: 'center' }}> */}
-                    <div style={{ margin: 'auto', width: '50vw' }}>
-                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
+                    {/* <div style={{ margin: 'auto', width: '50vw' }}> */}
+                    {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
+                    <Content>
+                        <p>
                             Hello! I'm a self-taught developer who has professional experience developing and designing web applications. Some of the projects
                             I've contributed to include a real-time machine learning platform, an internal pricing application, and a generative AI application.
                         </p>
-                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
-                            My main focus these days is finding ways to become a better developer. That includes learning new frameworks and understanding algorithms better.
+                        {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
+                        <p>
+                            My main focus these days is finding ways to become a better developer. That includes learning new frameworks, developing algorithms, and creating projects.
                         </p>
-                        <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}>
+                        {/* <p style={{ padding: 0, textAlign: 'left', fontSize: '1.5rem' }}> */}
+                        <p>
                             When I'm not at my computer, I love to spend time lifting weights, playing basketball,
                             or watching a good TV show. If you want to connect, my contact information is located on the top and bottom of this site.
                         </p>
-                    </div>
-                    {/* </Grid> */}
+                        {/* </div> */}
+                    </Content>
                 </Grid>
             </Box>
-        </motion.div>
+        </motion.div >
     )
 }
 
