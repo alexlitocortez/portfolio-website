@@ -68,7 +68,15 @@ const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px
+    gap: 16px;
+
+    @media (max-width: 576px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-direction: column;
+    }
 `;
 
 
@@ -128,7 +136,7 @@ function Projects({ id }) {
               </a>
             </div>
           </div>
-          <p style={{ fontWeight: 'bold' }}>Scraping and displaying side hustle ideas from different marketplaces</p>
+          <p style={{ fontWeight: 'bold' }}>Scraping and displaying side hustle ideas from different websites.</p>
           <ImageContainer>
             <img src={nextJsIcon} alt='Next.js Icon' className="responsive-image" />
             <img src={typescriptIcon} alt='TypeScript Icon' className="responsive-image" />
