@@ -69,6 +69,7 @@ const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin: 1rem;
 
     @media (max-width: 576px) {
       display: flex;
@@ -76,6 +77,7 @@ const ImageContainer = styled.div`
       align-items: center;
       gap: 16px;
       flex-direction: column;
+      margin: 1rem;
     }
 `;
 
