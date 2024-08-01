@@ -75,7 +75,7 @@ const Experience = ({ id }) => {
                         <Grid item xs={12} md={4} container alignItems='top' style={{ justifyContent: 'center' }}>
                         </Grid>
                         <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
-                            <p style={{ padding: 0, margin: 0 }}>Freelance Developer</p>
+                            <p style={{ padding: 0, margin: 0, fontWeight: 'bold' }}>Freelance Developer</p>
                         </Grid>
                         <Grid item xs={12} md={4} container alignItems='center' style={{ justifyContent: 'center' }}>
                             <p style={{ margin: 0 }}>March 2022 - May 2022</p>

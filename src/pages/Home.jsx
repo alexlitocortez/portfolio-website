@@ -18,7 +18,7 @@ function Home() {
   return (
     <StyledDiv>
       {/* <RadialGradient /> */}
-      <NavBar />
+      {/* <NavBar /> */}
       <AboutMe />
       <Projects />
       <Experience />

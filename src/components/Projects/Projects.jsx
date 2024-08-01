@@ -13,6 +13,7 @@ import prismaIcon from '../../assets/prisma.svg';
 import trpcIcon from '../../assets/trpc.svg';
 import tailwindIcon from '../../assets/tailwindcss-icon.svg';
 import v1 from '../../assets/V1.jpg';
+import Gemini from '../../assets/Gemini.png';
 
 export const StyledDiv = styled.div`
   display: flex;
@@ -105,12 +106,7 @@ function Projects({ id }) {
       }}
     >
       <div className='project-container'>
-        {/* <Box sx={{
-          flexGrow: 1,
-          margin: 1,
-        }}> */}
         <Grid container spacing={2} style={{ flexWrap: 'wrap', justifyContent: 'center', flexDirection: 'column' }}>
-          {/* <Grid item xs={12} md={8} container alignItems='top' style={{ justifyContent: 'center', flexDirection: 'column' }}> */}
           <Title>Projects</Title>
           <div style={{ margin: 'auto', padding: '1rem' }}>
             <a href='https://v1-bzfduvh57-acim650gmailcoms-projects.vercel.app/' target='_blank'>
@@ -130,7 +126,7 @@ function Projects({ id }) {
           </div>
           <div className='project-link-container'>
             <div className='github-container'>
-              <a href='https://github.com/alexlitocortez/student-api' target='_blank' style={{ color: 'white' }}>
+              <a href='https://github.com/alexlitocortez/v1' target='_blank' style={{ color: 'white' }}>
                 <FiGithub size={30} className='project-github-icon' />
               </a>
               <a href='https://v1-bzfduvh57-acim650gmailcoms-projects.vercel.app/' target='_blank' style={{ color: 'white' }}>
@@ -146,10 +142,39 @@ function Projects({ id }) {
             <img src={trpcIcon} alt='TRPC Icon' className="responsive-image" />
             <img src={tailwindIcon} alt='Tailwind Icon' className="responsive-image" />
           </ImageContainer>
-          {/* </div> */}
-          {/* </Grid> */}
+          <div style={{ margin: 'auto', padding: '1rem' }}>
+            <a href='https://gemini-teal-one.vercel.app/' target='_blank'>
+              <img
+                src={Gemini}
+                style={{
+                  border: '5px solid #FF5733',
+                  borderRadius: '10px',
+                  maxWidth: '100%',
+                  width: '300px',
+                  cursor: 'pointer'
+                }}
+                alt='Gemini-image'
+              />
+            </a>
+            <SubTitle>Gemini</SubTitle>
+          </div>
+          <div className='project-link-container'>
+            <div className='github-container'>
+              <a href='https://github.com/alexlitocortez/gemini' target='_blank' style={{ color: 'white' }}>
+                <FiGithub size={30} className='project-github-icon' />
+              </a>
+              <a href='https://gemini-teal-one.vercel.app/' target='_blank' style={{ color: 'white' }}>
+                <SiVercel size={30} className='project-vercel-icon' />
+              </a>
+            </div>
+          </div>
+          <p style={{ fontWeight: 'bold' }}>Created workout plan generator by connecting to Google's chatbot (Gemini).</p>
+          <ImageContainer>
+            <img src={nextJsIcon} alt='Next.js Icon' className="responsive-image" />
+            <img src={typescriptIcon} alt='TypeScript Icon' className="responsive-image" />
+            <img src={tailwindIcon} alt='Tailwind Icon' className="responsive-image" />
+          </ImageContainer>
         </Grid>
-        {/* </Box> */}
       </div>
     </motion.div >
   )
