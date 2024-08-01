@@ -38,7 +38,7 @@ function NavBar() {
 
   return (
     <NavBarContainer>
-      <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Contact me <ArrowRightAltIcon /> <span style={{ textDecoration: 'underline', fontSize: '1.2rem' }}>alexlitocortez@gmail.com </span></p>
+      {/* <p style={{ margin: 0, padding: 0, textAlign: 'left' }}>Contact me <ArrowRightAltIcon /> <span style={{ textDecoration: 'underline', fontSize: '1.2rem' }}>alexlitocortez@gmail.com </span></p> */}
     </NavBarContainer>
   );
 }

@@ -168,7 +168,7 @@ function Projects({ id }) {
               </a>
             </div>
           </div>
-          <p style={{ fontWeight: 'bold' }}>Created workout plan generator by connecting to Google's chatbot (Gemini).</p>
+          <p style={{ fontWeight: 'bold' }}>Used Google's chatbot (Gemini) to create a workout plan generator.</p>
           <ImageContainer>
             <img src={nextJsIcon} alt='Next.js Icon' className="responsive-image" />
             <img src={typescriptIcon} alt='TypeScript Icon' className="responsive-image" />
